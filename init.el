@@ -3,6 +3,7 @@
 ;;设置编辑配置文件的函数
 (defun open-init-file()
   (interactive)
+  
   (find-file "~/.emacs.d/init.el"))
 
 (add-to-list 'load-path "~/.emacs.d/init")
