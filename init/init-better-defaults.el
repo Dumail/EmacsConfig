@@ -62,4 +62,6 @@
 ;;C-x C-j open current directory
 (require 'dired-x)
 
+(setq dired-dwim-target t)
+
 (provide 'init-better-defaults)

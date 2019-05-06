@@ -1,3 +1,4 @@
+
 (global-set-key "\C-s" 'swiper)
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
 (global-set-key (kbd "<f6>") 'ivy-resume)
@@ -10,18 +11,31 @@
 (global-set-key (kbd "C-h C-v") 'find-variable)
 (global-set-key (kbd "C-h C-k") 'find-function-on-key)
 
-
 (global-set-key (kbd "<f2>") 'open-init-file)
 
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
-;;快速搜索git目录
 (global-set-key (kbd "C-c p") 'counsel-git)
 
-;;智能格式化
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
 
-;;手动补全
 (global-set-key (kbd "s-/") 'hippie-expand)
 
-(provide 'init-keybindings)
+(with-eval-after-load 'dired
+  (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
+
+(tool-bar-mode -1)
+
+(scroll-bar-mode -1)
+
+(setq-default cursor-type 'bar)
+
+(global-hl-line-mode t)
+
+(setq-default inhibit-splash-screen 1)
+
+(set-default-font "-ADBO-Source Code Variable-semibold-normal-normal-*-20-*-*-*-m-0-iso10646-1")
+
+(global-linum-mode 1)
+
+;;(setq initial-frame-alist (quote ((fullscreen . maximized))))

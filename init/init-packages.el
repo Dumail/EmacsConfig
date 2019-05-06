@@ -49,9 +49,9 @@
 (global-hungry-delete-mode)
 
 ;;设置括号补全
-(require 'smartparens-config)
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 (smartparens-global-mode t)
+(sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
 
 ;;设置swiper
 (setq enable-recursive-minibuffers t)
